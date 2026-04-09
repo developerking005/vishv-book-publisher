@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Work From Home Job</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Poppins", sans-serif;
+      }
+
+      body {
+        background: #f2f3f5;
+        text-align: center;
+        padding: 40px 15px;
+      }
+
+      /* ===== GLOWING BUTTON ===== */
+
+      .join-btn {
+        position: relative;
+        background: linear-gradient(45deg, #1f6ea9, #2aa8ff);
+        color: white;
+        padding: 16px 30px;
+        border-radius: 50px;
+        font-weight: 600;
+        margin: 25px auto;
+        cursor: pointer;
+        max-width: 420px;
+        overflow: hidden;
+        transition: all 0.3s ease;
+        letter-spacing: 0.5px;
+
+        box-shadow: 0 0 10px rgba(42, 168, 255, 0.6),
+          0 0 20px rgba(42, 168, 255, 0.4), 0 0 40px rgba(42, 168, 255, 0.2);
+
+        animation: pulseGlow 2.5s infinite alternate;
+      }
+
+      .join-btn:hover {
+        transform: translateY(-3px) scale(1.02);
+        box-shadow: 0 0 15px rgba(42, 168, 255, 0.9),
+          0 0 30px rgba(42, 168, 255, 0.6), 0 0 60px rgba(42, 168, 255, 0.4);
+      }
+
+      /* Shine Effect */
+      .join-btn::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 60%;
+        height: 100%;
+        background: linear-gradient(
+          120deg,
+          transparent,
+          rgba(255, 255, 255, 0.5),
+          transparent
+        );
+        transform: skewX(-25deg);
+      }
+
+      .join-btn:hover::before {
+        animation: shine 1s ease;
+      }
+
+      @keyframes shine {
+        100% {
+          left: 150%;
+        }
+      }
+
+      @keyframes pulseGlow {
+        from {
+          box-shadow: 0 0 10px rgba(42, 168, 255, 0.5),
+            0 0 20px rgba(42, 168, 255, 0.3);
+        }
+        to {
+          box-shadow: 0 0 20px rgba(42, 168, 255, 0.9),
+            0 0 40px rgba(42, 168, 255, 0.6);
+        }
+      }
+
+      /* ===== TEXT ===== */
+
+      .title {
+        font-size: 28px;
+        color: #1f6ea9;
+        font-weight: 600;
+        margin-top: 20px;
+      }
+
+      .sub-text {
+        color: #1fa64a;
+        font-size: 16px;
+        margin: 15px 0 30px;
+      }
+
+      /* ===== BADGE ===== */
+
+      .badge {
+        width: 120px;
+        height: 120px;
+        margin: 0 auto 25px;
+        border-radius: 50%;
+        background: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        border: 3px solid #e6f5ea;
+      }
+
+      .badge span {
+        font-weight: 700;
+        color: #2aa84a;
+        font-size: 22px;
+      }
+
+      .badge small {
+        color: #2aa84a;
+        font-weight: 600;
+      }
+
+      /* ===== SECTION TITLE ===== */
+
+      .section-title {
+        font-size: 26px;
+        font-weight: 700;
+        color: #2aa84a;
+        margin-bottom: 20px;
+      }
+
+      /* ===== LIST ===== */
+
+      .list {
+        text-align: left;
+        max-width: 420px;
+        margin: 0 auto 30px;
+      }
+
+      .list li {
+        list-style: none;
+        margin: 14px 0;
+        display: flex;
+        align-items: center;
+        font-size: 16px;
+        color: #333;
+      }
+
+      .check {
+        background: #e6f5ea;
+        color: #2aa84a;
+        width: 26px;
+        height: 26px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 12px;
+        font-weight: bold;
+      }
+
+      /* ===== LIMITED TEXT ===== */
+
+      .limited {
+        color: #1f6ea9;
+        font-style: italic;
+        font-weight: 500;
+        margin: 20px 0 25px;
+        font-size: 18px;
+      }
+
+      /* ===== NOTE ===== */
+
+      .note {
+        font-size: 13px;
+        color: #777;
+        margin-top: 20px;
+      }
+
+      .note b {
+        color: #2aa84a;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- BUTTON TOP -->
+    <div class="join-btn" onclick="joinTelegram()">
+      JOIN TELEGRAM & START WORK 💼
+    </div>
+
+    <!-- TEXT -->
+    <div class="title">Work From Home Job ✍</div>
+    <div class="sub-text">No Investment · Simple Work · Weekly Payment</div>
+
+    <!-- BADGE -->
+    <div class="badge">
+      <span>VISHV BOOK </span>
+      <small> PUBLISHERS ✔</small>
+    </div>
+
+    <!-- SECTION -->
+    <div class="section-title">Handwriting Work</div>
+
+    <ul class="list">
+      <li>
+        <div class="check">✓</div>
+        Part Time & Full Time Available
+      </li>
+      <li>
+        <div class="check">✓</div>
+        Fresher & Students Can Apply
+      </li>
+      <li>
+        <div class="check">✓</div>
+        Earn ₹18,000 – ₹25,000 Monthly
+      </li>
+      <li>
+        <div class="check">✓</div>
+        No Experience Required
+      </li>
+    </ul>
+
+    <div class="limited">Limited Seats Available – Apply Today 🚀</div>
+
+    <!-- BUTTON BOTTOM -->
+    <div class="join-btn" onclick="joinTelegram()">
+      JOIN TELEGRAM & START WORK 💼
+    </div>
+
+    <div class="note">
+      <b>Note:</b> This is a genuine handwriting-based work opportunity. Read
+      details carefully before applying.
+    </div>
+
+    <script>
+      function joinTelegram() {
+        // 👉 PUT YOUR TELEGRAM LINK HERE
+        window.location.href = "https://t.me/+056wt_TXlGc0MWE1";
+      }
+    </script>
+  </body>
+</html>
